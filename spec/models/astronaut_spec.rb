@@ -12,8 +12,16 @@ describe Astronaut, type: :model do
     it { should have_many :missions}
   end
 
-#   describe 'Statistics' do
-#     it 'should have average stats for all astronauts'do
-#   end
-# end
+  describe 'Statistics' do
+    before(:each) do
+      @astronaut_1 = Astronaut.create(name: "John", age: 25, job: "engineer")
+      @astronaut_2 = Astronaut.create(name: "Ruth", age: 38, job: "pilot")
+      @astronaut_3 = Astronaut.create(name: "Bill", age: 41, job: "doctor")
+    end
+
+    it 'should have average stats for all astronauts'do
+
+    expect(Astronaut.average_age).to eq(34)
+  end
+end
 end
