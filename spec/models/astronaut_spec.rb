@@ -11,4 +11,9 @@ describe Astronaut, type: :model do
     it { should have_many :astronaut_missions}
     it { should have_many :missions}
   end
+
+#   describe 'Statistics' do
+#     it 'should have average stats for all astronauts'do
+#   end
+# end
 end
