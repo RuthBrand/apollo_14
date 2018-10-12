@@ -16,6 +16,7 @@ RSpec.describe 'as a visitor' do
    expect(page).to have_content(@astronaut_1.name)
    expect(page).to have_content(@astronaut_2.age)
    expect(page).to have_content(@astronaut_3.job)
+   expect(page).to have_content(34)
   end
  end
 end
